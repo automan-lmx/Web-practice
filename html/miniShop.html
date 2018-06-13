@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name = "viewport" content = "width = device-width, initial-scale = 1, user-scalable = no">
+	<title>欢迎来到微商城</title>
+	<link rel = "stylesheet" href = "../css/miniShop.css">
+	 <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">  
+	
+</head>
+<body>
+	<div class = 'wrapper'>
+	            <header>
+			<div class="top">
+				<div class = "col-xs-1 col-md-1 col-sm-1 left-arrow">	
+				<a class = 'glyphicon glyphicon-chevron-left iconStyle '></a>
+				</div>
+				
+			    	<div class="col-xs-9 col-md-9 col-sm-9 search-input ">
+			    		<form action="#">
+			    			<input type="text" placeholder = "巨大优惠尽在微商城">
+			    			<a class="glyphicon glyphicon-search iconStyle"></a>	
+			    		</form>
+			    	</div>
+				<div class = "col-xs-1 col-md-1 col-sm-1 email">
+					<a class = 'glyphicon glyphicon-envelope iconStyle '></a>
+				</div>
+			</div>
+		            
+		            	<div id="myCarousel" class="carousel slide">
+				<!-- 轮播（Carousel）指标 -->
+				<ol class="carousel-indicators">
+					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					<li data-target="#myCarousel" data-slide-to="1"></li>
+					<li data-target="#myCarousel" data-slide-to="2"></li>
+					<li data-target="#myCarousel" data-slide-to="3"></li>
+				</ol>   
+				<!-- 轮播（Carousel）项目 -->
+				<div class="carousel-inner">
+					<div class="item active">
+						<a href = "javascript:0;">
+							<img src="" alt="First slide">
+						</a>
+					</div>
+					<div class="item">
+						<a href = "javascript:0;">
+							<img src="" alt="Second slide">
+						</a>
+					</div>
+					<div class="item">
+						<a href = "javascript:0;">
+							<img src="" alt="Third slide">
+						</a>
+					</div>
+					<div class="item">
+						<a href = "javascript:0;">
+							<img src="" alt="Four slide">
+						</a>
+					</div>
+				</div>
+				<!-- 轮播（Carousel）导航 -->
+				<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div> 
+	            </header>
+	           <nav class = "goodsIcon">
+			<ul  class = "first-ul">
+	            			<li>
+	            				<a href="">
+	            					<img src="../img/fork.png" alt="">
+	            					<p>美食专栏</p>
+	            				</a>	
+	            			</li>
+	            			<li>
+	            				<a href="">
+	            					<img src="../img/book.png" alt="">
+	            					<p>照片成书</p>
+	            				</a>
+	            			</li>
+	            			<li>
+	            				<a href="">
+	            					<img src="../img/bag.png" alt="">
+	            					<p>限时抢购</p>
+	            				</a>
+	            			</li>
+	            			<li>
+	            				<a href="">
+	            					<img src="../img/leaf.png" alt="">
+	            					<p>纪念礼物</p>
+	            				</a>
+	            			</li>
+		            	</ul>
+		            	<ul class = "second-ul">
+		            		<li>
+			            		<a href="">
+			            			<img src="../img/bird2.png" alt="">
+			            			<span>创意礼品</span>
+			            		</a>
+		            		</li>
+		            		<li>
+			            		<a href="">
+			            			<img src="../img/gift.png" alt="">
+			            			<span>节日礼物</span>
+			            		</a>
+		            		</li>
+		            	</ul>
+	            </nav>	
+		<div class = "discount">
+			<img src='../img/calendar.png' alt="">
+			<span>今日优惠</p>
+		</div>
+		<section id = "App">
+			<ul>
+				<li v-for= "data in datas">
+					<a :href=data[0].url>
+						<img :src=data[0].img>
+					</a>
+						<span class = "spanWra">
+							<span class = "sTitle" >
+							<span class = "today">今日</span>
+							 <span class = "details">{{data[0].goods}}</span> 
+							</span>
+							<br>
+							<span class = "sPrice">￥{{data[0].dprice}}</span>
+							<br>
+							<span class = "sComment">
+							<span class = "prePrice">￥{{data[0].price}}</span>
+							<span class = "number">24万人购买</span>
+							</span>
+						</span>
+					
+				</li>
+				<li v-for= "data in datas">
+					<a :href=data[1].url>
+						<img :src=data[1].img>
+					</a>
+						<span class = "spanWra">
+							<span class = "sTitle" >
+							<span class = "today">今日</span>
+							 <span class = "details">￥{{data[1].goods}}</span> 
+							</span>
+							<br>
+							<span class = "sPrice">￥{{data[1].dprice}}</span>
+							<br>
+							<span class = "sComment">
+							<span class = "prePrice">￥{{data[1].price}}</span>
+							<span class = "number">24万人购买</span>
+							</span>
+						</span>
+					
+				</li>
+				<li v-for= "data in datas">
+					<a :href=data[1].url>
+						<img :src=data[2].img>
+					</a>
+						<span class = "spanWra">
+							<span class = "sTitle" >
+							<span class = "today">今日</span>
+							 <span class = "details">{{data[2].goods}}</span> 
+							</span>
+							<br>
+							<span class = "sPrice">${{data[2].dprice}}</span>
+							<br>
+							<span class = "sComment">
+							<span class = "prePrice">￥{{data[2].price}}</span>
+							<span class = "number">24万人购买</span>
+							</span>
+						</span>
+					
+				</li>
+				<li v-for= "data in datas">
+					<a :href=data[1].url>
+						<img :src=data[3].img>
+					</a>
+						<span class = "spanWra">
+							<span class = "sTitle" >
+							<span class = "today">今日</span>
+							 <span class = "details">{{data[3].goods}}</span> 
+							</span>
+							<br>
+							<span class = "sPrice">￥{{data[3].dprice}}</span>
+							<br>
+							<span class = "sComment">
+							<span class = "prePrice">￥{{data[3].price}}</span>
+							<span class = "number">24万人购买</span>
+							</span>
+						</span>
+					
+				</li>
+			</ul>
+		</section>
+	            <footer>
+		        	<div class="main_nav_bottom">
+				<nav class="navbar  navbar-fixed-bottom">
+					<div class="container" align="center">
+						<ul class="nav nav-tabs nav-tabs-justified">
+							<div class="row" align="center">
+								<div class="col-md-3 col-sm-3 col-xs-3 active" align="center">
+									<li>		
+										<a href="#" >
+											<span class = "glyphicon glyphicon-home bottom-icon"></span>首页
+										</a>
+									</li>
+								</div>
+								<div class="col-md-3 col-sm-3 col-xs-3" align="center">
+									<li>
+										<a href="#">
+											<span class = "	glyphicon glyphicon-th-large  bottom-icon"></span>
+											<p>分类</p>
+										</a>
+									</li>
+								</div>
+								<div class="col-md-3 col-sm-3 col-xs-3" align="center">
+									<li>
+										<a href="#">
+											<span class="glyphicon glyphicon-shopping-cart  bottom-icon" ></span>
+											 <p>购物车</p>
+										</a>
+									</li>
+								</div>
+								<div class="col-md-3 col-sm-3 col-xs-3" align="center">
+									<li>
+										<a href="./userPage.html">
+											<span class = "glyphicon glyphicon-user   bottom-icon"></span>
+											<p>我的</p>
+										</a>
+									</li>
+								</div>						
+							</div>
+						</ul>
+					</div>
+				</nav>
+			</div>  
+	          </footer>
+	</div>
+	
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<!-- <script src = "../js/bootstrap.js"></script> -->
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src = "../js/miniShop.js"></script>
+	<script src = "../js/vue.min.js"></script>
+	<script>
+	     
+ 	$(document).ready(function(){
+ 		$.getJSON("http://10.21.21.119/test/discount.php",function(data){
+ 
+ 			new Vue({
+ 				el:"#App",
+ 				data:{
+ 					datas:data
+ 				}
+ 			});
+ 			
+ 		})
+ 	})
+	</script>
+</body>
+</html>

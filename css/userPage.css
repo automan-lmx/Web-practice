@@ -1,0 +1,207 @@
+*{
+	margin : 0;
+	padding : 0;
+	list-style :  none;
+	text-decoration : none;
+	/*color : #a3a3a3;*/
+}
+a:hover,a {
+	text-decoration:  none;
+	color:#a2a2a2;
+}
+
+/*顶部个人信息*/
+body {
+	background-color: #f4f4f4;
+	position: relative;
+	width: 100%;
+	height :100%;
+}
+
+header .top-user-data {
+	background : url('../img/7.jpg') no-repeat;
+	background-size: 100% 100%;
+	width : 100%;
+	height : 200px;
+	color : #E9E4DD;
+	font-size : 16px;
+	top:0;
+	position:relative;
+	border :1px solid #000;
+}
+
+
+header .top-user-data .commonStyle {
+	/*border :1px solid #000;*/
+	position : relative;
+	width : 100%;
+	
+}
+ .commonStyle li {
+	float :left;
+	height : 60px;
+	line-height : 60px;
+	/*border : 1px solid #f00;*/
+	margin-left : 10px;
+}
+
+.commonStyle .rightArrow {
+	font-size : 40px;
+	width : 15%;
+	float : right;
+	text-align : center;
+	right:0;
+}
+
+header .top-user-data .top-display {
+	margin-top : 50px;
+	height : 106px;
+	/*background : rgba(255,255,255,0.3);*/
+}
+header .top-user-data .top-display .userPhoto {
+	border-radius : 50%;
+	width : 70px;
+	height : 70px;
+}
+
+header .top-user-data .top-display .userName {
+	height : 70px;
+	line-height : 40px;
+	width : 50%;
+}
+
+.top-user-data .commonStyle li  span {
+	display : block;
+}
+
+ .top-user-data .commonStyle:after {
+	content :"";
+	clear : both;
+	display: block;
+}
+
+/*头部的收藏记录列*/
+ .equipments{
+	width : 100%;
+	/*height : 100px;*/
+}
+ .equipment {
+	width : 100%;
+  	display : flex;
+  	justify-content : space-around;
+	align-items :  flex-end;
+	
+
+}
+header .equipment{
+	background-color : #85AA21;
+	height : 45px;
+	font-size : 14px;
+}
+header .equipment li{
+	display : flex;
+	align-self : center;
+}
+
+
+ header .equipment .textSpan {
+	margin-left:8px;
+	align-self : center;
+}
+
+/*导航栏*/
+nav {
+	width : 100%;
+	/*border-bottom: 1px solid #000;*/
+	background-color: #fff;
+	margin-top : 8px;
+	font-size : 18px;
+	margin-bottom: 1px;
+	padding: 0;	
+}
+nav .commonStyle,
+section .commonStyle {
+	height : 60px;
+	margin-top: 0;
+	padding: 0;
+}
+nav .userPhoto,
+section .userPhoto{
+	width:34px;
+	height : 34px;
+	padding: 13px 10px 0px 10px;
+}
+nav .userName, 
+nav .rightArrow {
+	height : 60px;
+	line-height: 60px;
+}
+nav .rightArrow,
+section  .rightArrow{
+	color : #c7c7c7;
+}
+
+nav .equipment{
+	height :75px;
+	border-top: 3px solid #f4f4f4;
+	background-color: #fff;
+	font-size: 14px;
+}
+nav .equipment li,
+ footer .equipment li{
+	left : 0;
+	right : 0;
+	top : 0
+	bottom: 0;
+	margin : auto auto;
+}
+nav .equipment img,
+footer .equipment img {
+	display:  block;
+	left : 0;
+	right : 0;
+	top : 0
+	bottom: 0;
+	margin : auto auto;
+}
+nav:after {
+	clear : both;
+	content :"";
+	display: block;
+}
+section:before {
+	clear : both;
+	content :"";
+	display: block;
+}
+section {
+	/*position :absolute;*/
+	width :100%;
+	height :300px;
+	border-top: 6px solid #f4f4f4;
+	
+}
+section ul {
+	margin-bottom: 2px;
+	background-color: #fff;
+}
+
+footer {
+	/*position :absolute;*/
+	position:fixed;
+	bottom: 0;
+	width:100%;
+	border:1px solid #e4e4e4;
+	background-color: #fff;
+	font-size: 13px;
+	/*color: #a2a2a2;*/
+}
+footer li{
+	width : 25%;
+	text-align: center;
+	padding:5px;
+}
+footer li img{
+	width: 28px;
+	height:28px;
+}
